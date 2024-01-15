@@ -5,13 +5,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="cpu" class="using_xml_config.Cpu">
+    <bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu">
 		<property name="manufacturer" value="Intel"/>
 		<property name="clockSpeed" value="2.5"/>
 	</bean>
-	<bean id="computer" class="using_xml_config.Computer">
+	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer">
 		<property name="type" value="TABLET"/>
-		<property name="model"/>
+		<property name="model" value="ABCQY"/>
 		<property name="cpu" ref="cpu"/>
 	</bean>
 

@@ -1,5 +1,7 @@
 package com.mkoner.spring_framework_core.using_xml_config;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 	
@@ -8,6 +10,7 @@ public class Test {
 		Computer computer = new Computer(ComputerType.DESKTOP, "abcw", cpu);
 		System.out.println(computer);
 		
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		
 	}
 
