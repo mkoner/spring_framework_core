@@ -9,10 +9,10 @@
 		<property name="manufacturer" value="Intel"/>
 		<property name="clockSpeed" value="2.5"/>
 	</bean>
-	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer">
+	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="byName">
 		<property name="type" value="TABLET"/>
 		<property name="model" value="ABCQY"/>
-		<property name="cpu" ref="cpu"/>
+		<!-- <property name="cpu" ref="cpu"/> -->
 	</bean>
 
 </beans>
