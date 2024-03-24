@@ -5,14 +5,30 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu">
+    
+    <!--Using setter injection-->
+<!--    <bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu">
 		<property name="manufacturer" value="Intel"/>
 		<property name="clockSpeed" value="2.5"/>
-	</bean>
-	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="byType">
+	</bean>-->
+	
+<!--	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="byType">
 		<property name="type" value="TABLET"/>
 		<property name="model" value="ABCQY"/>
-		<!-- <property name="cpu" ref="cpu"/> -->
+		 <property name="cpu" ref="cpu"/> 
+	</bean>-->
+	
+	
+	<!--Using construnction injection-->
+	<bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu">
+		<constructor-arg name="manufacturer" value="Intel"/>
+		<constructor-arg name="clockSpeed" value="2.5"/>
 	</bean>
+		<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer">
+		<constructor-arg name="type" value="TABLET"/>
+		<constructor-arg name="model" value="ABCQY"/>
+		<constructor-arg name="cpu" ref="cpu"/>
+	</bean>
+	
 
 </beans>

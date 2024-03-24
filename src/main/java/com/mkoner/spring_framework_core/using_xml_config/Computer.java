@@ -6,8 +6,8 @@ public class Computer {
 	private String model;
 	private Cpu cpu;
 	
-	public Computer() {
-	}
+//	public Computer() {
+//	}
 
 	public Computer(ComputerType type, String model, Cpu cpu) {
 		super();

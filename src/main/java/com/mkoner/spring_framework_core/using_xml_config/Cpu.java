@@ -4,8 +4,8 @@ public class Cpu {
 	private String manufacturer;
 	private String clockSpeed;
 	
-	public Cpu() {
-	}
+//	public Cpu() {
+//	}
 
 	public Cpu(String manufacturer, String clockSpeed) {
 		this.manufacturer = manufacturer;
@@ -17,6 +17,7 @@ public class Cpu {
 	}
 
 	public void setManufacturer(String manufacturer) {
+		System.out.println("Setter called");
 		this.manufacturer = manufacturer;
 	}
 
@@ -25,6 +26,7 @@ public class Cpu {
 	}
 
 	public void setClockSpeed(String clockSpeed) {
+		System.out.println("Setter called");
 		this.clockSpeed = clockSpeed;
 	}
 
