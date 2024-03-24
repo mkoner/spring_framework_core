@@ -19,15 +19,23 @@
 	</bean>-->
 	
 	
-	<!--Using construnction injection-->
+	<!--Using constructor injection-->
 	<bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu">
 		<constructor-arg name="manufacturer" value="Intel"/>
 		<constructor-arg name="clockSpeed" value="2.5"/>
 	</bean>
-		<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer">
+<!--	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer">
 		<constructor-arg name="type" value="TABLET"/>
 		<constructor-arg name="model" value="ABCQY"/>
 		<constructor-arg name="cpu" ref="cpu"/>
+	</bean>-->
+	
+	
+	<!--Autowire with constructor injection-->
+	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="constructor">
+		<constructor-arg name="type" value="TABLET"/>
+		<constructor-arg name="model" value="ABCQY"/>
+		<!--<constructor-arg name="cpu" ref="cpu"/>-->
 	</bean>
 	
 
