@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
     xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
 
     <!-- bean definitions here -->
     
@@ -32,11 +34,17 @@
 	
 	
 	<!--Autowire with constructor injection-->
-	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="constructor">
+<!--	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="constructor">
 		<constructor-arg name="type" value="TABLET"/>
 		<constructor-arg name="model" value="ABCQY"/>
-		<!--<constructor-arg name="cpu" ref="cpu"/>-->
-	</bean>
+		<constructor-arg name="cpu" ref="cpu"/>
+	</bean>-->
 	
+	<!--Autowire with constructor injection and not hard coding values-->
+	<bean id="model" class="java.lang.String" >
+		<constructor-arg value="DELL"/>
+	</bean>
+	<util:constant static-field="com.mkoner.spring_framework_core.using_xml_config.ComputerType.TABLET" />
+	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="constructor" />
 
 </beans>
