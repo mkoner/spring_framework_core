@@ -24,12 +24,12 @@ public class Product {
 		this.category = category;
 	}
 	@Autowired
+	@Value("${productPrice}")
 	public void setPrice(double price) { //@Value("13.45")
 		this.price = price;
 	}
 	public String toString() {
 		return "Product: [price: " + price + ", category: " + category + "]";
 	}
-	
 	
 }
