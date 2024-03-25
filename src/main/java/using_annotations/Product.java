@@ -23,8 +23,9 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	@Autowired
-	@Value("${productPrice}")
+	//@Autowired
+	//@Value("${productPrice}")
+	@Value("13.45")
 	public void setPrice(double price) { //@Value("13.45")
 		this.price = price;
 	}

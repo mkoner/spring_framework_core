@@ -11,11 +11,11 @@
 		        http://www.springframework.org/schema/util   
         http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 
-	<!--<context:annotation-config/>-->
-	<context:component-scan base-package="using_annotations"></context:component-scan>
+	<context:annotation-config/>
+	<!--<context:component-scan base-package="using_annotations"></context:component-scan>-->
 <!--	<bean id="name" class="java.lang.String" c:_0="Electronics" />
 	<bean id="price" class="java.lang.Double" c:_0="20.67" />-->
 	
-	<context:property-placeholder location="data.properties" />
+	<!--<context:property-placeholder location="data.properties" />-->
 
 </beans>

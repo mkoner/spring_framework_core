@@ -6,7 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		//ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		// use exclusively annotation
+		ApplicationContext context = new AnnotationConfigApplicationContext("using_annotations");
 		Product product = context.getBean("product", Product.class);
 		System.out.println(product);
 	}

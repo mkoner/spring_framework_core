@@ -12,8 +12,9 @@ public class Category {
 		this.categoryName = name;
 	}
 	
-	@Autowired
-	@Value("${categoryName}")
+	//@Autowired
+	//@Value("${categoryName}")
+	@Value("Clothing")
 	public void setCategoryName(String name) { //@Value("Clothing")
 		System.out.println("Setter");
 		this.categoryName = name;
