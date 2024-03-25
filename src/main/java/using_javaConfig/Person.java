@@ -1,5 +1,9 @@
 package using_javaConfig;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
 	private String name;
 	
@@ -14,6 +18,7 @@ public class Person {
 		return name;
 	}
 
+	@Value("${personName}")
 	public void setName(String name) {
 		this.name = name;
 	}
