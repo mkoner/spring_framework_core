@@ -2,9 +2,11 @@ package using_annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component("category")
+@PropertySource("data.properties")
 public class Category {
 	private String categoryName;
 	public Category() {};
@@ -13,8 +15,8 @@ public class Category {
 	}
 	
 	//@Autowired
-	//@Value("${categoryName}")
-	@Value("Clothing")
+	@Value("${categoryName}")
+	//@Value("Clothing")
 	public void setCategoryName(String name) { //@Value("Clothing")
 		System.out.println("Setter");
 		this.categoryName = name;
