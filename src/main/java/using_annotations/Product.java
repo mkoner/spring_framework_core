@@ -1,6 +1,7 @@
 package using_annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("product")
@@ -22,10 +23,13 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	public void setPrice(double price) {
+	@Autowired
+	public void setPrice(double price) { //@Value("13.45")
 		this.price = price;
 	}
 	public String toString() {
 		return "Product: [price: " + price + ", category: " + category + "]";
 	}
+	
+	
 }

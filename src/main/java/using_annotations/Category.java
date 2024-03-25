@@ -13,7 +13,7 @@ public class Category {
 	}
 	
 	@Autowired
-	public void setCategoryName(@Value("Clothing") String name) {
+	public void setCategoryName(String name) { //@Value("Clothing")
 		System.out.println("Setter");
 		this.categoryName = name;
 	}

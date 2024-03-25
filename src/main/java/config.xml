@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
@@ -9,5 +10,7 @@
 
 	<!--<context:annotation-config/>-->
 	<context:component-scan base-package="using_annotations"></context:component-scan>
+	<bean id="name" class="java.lang.String" c:_0="Electronics" />
+	<bean id="price" class="java.lang.Double" c:_0="20.67" />
 
 </beans>
