@@ -35,6 +35,9 @@ public class Cpu {
 		return "Cpu [manufacturer=" + manufacturer + ", clockSpeed=" + clockSpeed + "]";
 	}
 	
+	public void init() {
+		System.out.println("Init method called inside CPU");
+	}
 	
 	
 	
