@@ -39,6 +39,10 @@ public class Cpu {
 		System.out.println("Init method called inside CPU");
 	}
 	
+	public void destroy() {
+		System.out.println("Destroy method called inside CPU");
+	}
+	
 	
 	
 }

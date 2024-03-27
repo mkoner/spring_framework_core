@@ -13,6 +13,7 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Computer computer1 = context.getBean("computer", Computer.class);
 		System.out.println(computer1);
+		((ClassPathXmlApplicationContext)context).close();
 		
 	}
 

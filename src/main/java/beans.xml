@@ -22,7 +22,7 @@
 	
 	
 	<!--Using constructor injection-->
-	<bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu" init-method="init" >
+	<bean id="cpu" class="com.mkoner.spring_framework_core.using_xml_config.Cpu" init-method="init" destroy-method="destroy" >
 		<constructor-arg name="manufacturer" value="Intel"/>
 		<constructor-arg name="clockSpeed" value="2.5"/>
 	</bean>
