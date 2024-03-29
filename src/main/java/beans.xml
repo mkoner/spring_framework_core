@@ -47,6 +47,7 @@
 	<util:constant static-field="com.mkoner.spring_framework_core.using_xml_config.ComputerType.TABLET" />
 	<bean id="computer" class="com.mkoner.spring_framework_core.using_xml_config.Computer" autowire="constructor" />
 	
+	<!--Internationalization-->
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames" ref="basenames"/>
 	</bean>
